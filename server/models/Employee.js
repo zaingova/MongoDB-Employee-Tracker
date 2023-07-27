@@ -11,7 +11,8 @@ const employeeSchema = new Schema({
   },
   role_id: {
     type: Schema.Types.ObjectId,
-    ref: 'Role'
+    ref: 'Role',
+    required: true
   },
   manager_id: {
     type: Schema.Types.ObjectId,

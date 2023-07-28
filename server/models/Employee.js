@@ -12,11 +12,11 @@ const employeeSchema = new Schema({
   role_id: {
     type: Schema.Types.ObjectId,
     ref: 'Role',
-    required: true
+    //required: true
   },
   manager_id: {
     type: Schema.Types.ObjectId,
-    ref: this
+    ref: 'Employee'
   }
 });
 

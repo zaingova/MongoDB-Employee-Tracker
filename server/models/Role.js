@@ -1,4 +1,4 @@
-const { Schema, model } = require('mongoose');
+const { Schema, model, default: mongoose } = require('mongoose');
 
 const roleSchema = new Schema({
   title: {
@@ -6,7 +6,7 @@ const roleSchema = new Schema({
     required: true,
   },
   salary: {
-    type: Number,
+    type: mongoose.Types.Decimal128,
     required: true
   },
   department_id: {

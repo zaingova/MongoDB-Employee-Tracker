@@ -15,23 +15,23 @@ const typeDefs = gql`
 
   type Role {
     title: String!
-    salary: Number!
+    salary: Float!
     department_id: ID
   }
 
   type Query {
-    employees: [Employee]!
+    employees: [Employee]
     roles: [Role]!
     departments: [Department]!
   }
 
   type Mutation {
-    addEmployee(first_name: String!, last_name: String!, role_id: ID!, manager_id: ID!): [Employee]
-    addRole(title: String!, salary: Number!, department_id: ID): [Role]
-    addDepartment(name: String!): [Department]
-    removeEmployeeById(_id: ID!): [Empployee]
-    removeRoleById(_id: ID!): [Role]
-    removeDepartmentById(_id: ID!): [Department]
+    addEmployee(first_name: String!, last_name: String!, role_id: ID, manager_id: ID): Employee
+    addRole(title: String!, salary: Float!, department_id: ID): Role
+    addDepartment(name: String!): ID
+    removeEmployeeById(_id: ID!): ID
+    removeRoleById(_id: ID!): ID
+    removeDepartmentById(_id: ID!): ID
   }
 `;
 
